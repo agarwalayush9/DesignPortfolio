@@ -34,64 +34,34 @@ const categories = ['All', 'Frontend', 'Full Stack', 'Open Source'];
 
 const projects = [
   {
-    title: 'Nexus Dashboard',
-    description: 'A real-time analytics dashboard with live data streaming, interactive charts, and AI-powered insights.',
+    title: 'Cuddle Box',
+    description: 'A sustainable resale marketplace on the App Store. Built with SwiftUI, UIKit, and Firebase for real-time listings and authentication.',
     category: 'Full Stack',
-    techs: ['Next.js', 'TypeScript', 'PostgreSQL', 'WebSocket'],
-    stars: 342,
-    forks: 89,
+    techs: ['SwiftUI', 'Firebase', 'MVVM'],
+    stars: 124,
+    forks: 12,
     gradient: 'from-[#6366f1]/10 to-[#8b5cf6]/5',
     accentColor: '#8b5cf6',
   },
   {
-    title: 'Chrono UI',
-    description: 'A beautifully crafted component library with 50+ accessible React components and dark mode support.',
-    category: 'Open Source',
-    techs: ['React', 'TypeScript', 'Tailwind', 'Storybook'],
-    stars: 1205,
-    forks: 234,
+    title: 'Library Management System',
+    description: 'A scalable iOS app to manage library operations with real-time synchronization and user authentication across multiple devices.',
+    category: 'Full Stack',
+    techs: ['SwiftUI', 'Firebase', 'Core Data'],
+    stars: 89,
+    forks: 24,
     gradient: 'from-[#22c55e]/10 to-[#4ade80]/5',
     accentColor: '#22c55e',
   },
   {
-    title: 'Pixel Canvas',
-    description: 'A collaborative pixel art editor with real-time multiplayer, undo history, and export to PNG/SVG.',
+    title: 'Real-Time Order Tracking',
+    description: 'A real-time delivery tracking system using Google Maps SDK with advanced error handling and resilient networking practices.',
     category: 'Frontend',
-    techs: ['React', 'Canvas API', 'WebRTC', 'Framer Motion'],
-    stars: 567,
-    forks: 112,
+    techs: ['Swift', 'Google Maps API', 'REST'],
+    stars: 156,
+    forks: 34,
     gradient: 'from-[#f59e0b]/10 to-[#fbbf24]/5',
     accentColor: '#f59e0b',
-  },
-  {
-    title: 'DevFlow CLI',
-    description: 'A terminal-based developer workflow tool for automating project scaffolding, linting, and deployments.',
-    category: 'Open Source',
-    techs: ['Node.js', 'TypeScript', 'Commander.js'],
-    stars: 890,
-    forks: 156,
-    gradient: 'from-[#06b6d4]/10 to-[#22d3ee]/5',
-    accentColor: '#06b6d4',
-  },
-  {
-    title: 'Momentum',
-    description: 'A habit tracking app with streak visualization, daily reminders, and progress analytics.',
-    category: 'Full Stack',
-    techs: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind'],
-    stars: 423,
-    forks: 67,
-    gradient: 'from-[#ec4899]/10 to-[#f472b6]/5',
-    accentColor: '#ec4899',
-  },
-  {
-    title: 'Synthwave Portfolio',
-    description: 'A retro-themed portfolio template with neon gradients, CRT effects, and 80s-inspired animations.',
-    category: 'Frontend',
-    techs: ['React', 'Three.js', 'GSAP', 'CSS'],
-    stars: 756,
-    forks: 198,
-    gradient: 'from-[#a855f7]/10 to-[#c084fc]/5',
-    accentColor: '#a855f7',
   },
 ];
 
@@ -118,7 +88,7 @@ export default function ProjectsPage() {
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>Built</span>
           </h1>
-          <p className="text-[15px] text-[#606060] leading-relaxed max-w-lg">
+          <p className="text-lg text-[#606060] leading-relaxed max-w-lg">
             A collection of projects that showcase my skills in frontend development,
             full-stack engineering, and open-source contributions.
           </p>
@@ -135,7 +105,7 @@ export default function ProjectsPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`relative px-4 py-2 rounded-full text-[13px] font-medium transition-colors duration-200 ${
+              className={`relative px-4 py-2 rounded-full text-base font-medium transition-colors duration-200 ${
                 activeCategory === cat
                   ? 'text-white'
                   : 'text-[#525252] hover:text-[#a3a3a3]'
@@ -175,11 +145,11 @@ export default function ProjectsPage() {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-[17px] font-semibold text-white tracking-tight mb-1">
+                        <h3 className="text-xl font-semibold text-white tracking-tight mb-1">
                           {project.title}
                         </h3>
                         <span
-                          className="text-[10px] font-mono tracking-wider px-2 py-0.5 rounded-full border"
+                          className="text-xs font-mono tracking-wider px-2 py-0.5 rounded-full border"
                           style={{
                             color: project.accentColor,
                             borderColor: project.accentColor + '30',
@@ -200,7 +170,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-[13px] text-[#606060] leading-relaxed mb-5">
+                    <p className="text-base text-[#606060] leading-relaxed mb-5">
                       {project.description}
                     </p>
 
@@ -209,7 +179,7 @@ export default function ProjectsPage() {
                       {project.techs.map((tech) => (
                         <span
                           key={tech}
-                          className="text-[10px] font-mono tracking-wide px-2 py-0.5 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] text-[#525252]"
+                          className="text-xs font-mono tracking-wide px-2 py-0.5 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] text-[#525252]"
                         >
                           {tech}
                         </span>
@@ -217,7 +187,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Stats */}
-                    <div className="flex items-center gap-4 text-[11px] text-[#404040] font-mono">
+                    <div className="flex items-center gap-4 text-sm text-[#404040] font-mono">
                       <span className="flex items-center gap-1">
                         <StarIcon size={12} />
                         {project.stars.toLocaleString()}

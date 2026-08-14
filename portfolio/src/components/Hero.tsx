@@ -9,7 +9,7 @@ const transition = { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const };
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
-  const email = "hello@ayush.dev";
+  const email = "ayushagarwal.contact@gmail.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -27,13 +27,13 @@ export default function Hero() {
         transition={{ ...transition, delay: 0 }}
       >
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1.5 text-[11px] font-mono tracking-wide text-[#404040]">
-            <MapPin size={11} className="text-[#333]" />
+          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-[#a3a3a3]">
+            <MapPin size={14} className="text-[#a3a3a3]" />
             <span>INDIA</span>
           </div>
-          <div className="w-px h-3 bg-[rgba(255,255,255,0.06)]" />
-          <div className="flex items-center gap-1.5 text-[11px] font-mono tracking-wide text-[#404040]">
-            <Clock size={11} className="text-[#333]" />
+          <div className="w-px h-4 bg-[rgba(255,255,255,0.15)]" />
+          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-[#a3a3a3]">
+            <Clock size={14} className="text-[#a3a3a3]" />
             <span>{new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false })}</span>
           </div>
         </div>
@@ -61,8 +61,8 @@ export default function Hero() {
         </div>
 
         <div>
-          <h1 className="text-xl font-semibold text-white tracking-tight mb-1">Ayush Agarwal</h1>
-          <p className="text-[13px] text-[#525252]">
+          <h1 className="text-2xl font-semibold text-white tracking-tight mb-1">Ayush Agarwal</h1>
+          <p className="text-[15px] text-[#808080]">
             Available for work
           </p>
         </div>
@@ -75,7 +75,9 @@ export default function Hero() {
         transition={{ ...transition, delay: 0.2 }}
         className="mb-10"
       >
-        <h2 className="font-serif text-[clamp(3rem,8vw,6rem)] font-black leading-[0.95] tracking-tight">
+        <h2 className="font-serif text-[clamp(2.5rem,7vw,5.5rem)] font-black leading-[0.95] tracking-tight">
+          <span className="text-gradient">iOS &</span>
+          <br />
           <span className="text-gradient">FULL STACK</span>
           <br />
           <span className="text-gradient" style={{ opacity: 0.6 }}>DEVELOPER</span>
@@ -89,12 +91,12 @@ export default function Hero() {
         transition={{ ...transition, delay: 0.3 }}
         className="max-w-xl mb-12"
       >
-        <p className="text-[15px] text-[#808080] leading-[1.8] tracking-wide">
-          I craft beautiful, performant web experiences with modern technologies.
+        <p className="text-lg text-[#a3a3a3] leading-[1.8] tracking-wide">
+          I craft beautiful, performant web and iOS experiences.
           Passionate about clean code, intuitive design, and building products that make a difference using{" "}
+          <span className="inline-flex align-middle mx-0.5"><TechPill name="Swift" /></span>,{" "}
           <span className="inline-flex align-middle mx-0.5"><TechPill name="React" /></span>,{" "}
-          <span className="inline-flex align-middle mx-0.5"><TechPill name="Next.js" /></span>,{" "}
-          <span className="inline-flex align-middle mx-0.5"><TechPill name="TypeScript" /></span>{" "}
+          <span className="inline-flex align-middle mx-0.5"><TechPill name="Next.js" /></span>{" "}
           and <span className="inline-flex align-middle mx-0.5"><TechPill name="Node.js" /></span>.
         </p>
       </motion.div>

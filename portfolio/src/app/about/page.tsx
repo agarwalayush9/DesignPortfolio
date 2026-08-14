@@ -30,7 +30,7 @@ export default function AboutPage() {
 
           <TextReveal
             text="I'm a developer who believes that great software is a blend of engineering excellence and thoughtful design. I spend my days writing clean, performant code and my nights exploring new technologies. When I'm not coding, you'll find me reading about design systems, contributing to open source, or experimenting with creative coding."
-            className="text-[16px] text-[#707070] leading-[1.9] tracking-wide max-w-2xl"
+            className="text-xl text-[#707070] leading-[1.9] tracking-wide max-w-2xl"
           />
         </div>
 
@@ -68,8 +68,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.1}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">⚡</div>
-                <h3 className="text-[14px] font-semibold text-white mb-2">Performance First</h3>
-                <p className="text-[12px] text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-white mb-2">Performance First</h3>
+                <p className="text-sm text-[#525252] leading-relaxed">
                   Every millisecond matters. I obsess over Core Web Vitals and user-perceived performance.
                 </p>
               </div>
@@ -77,8 +77,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.2}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🎨</div>
-                <h3 className="text-[14px] font-semibold text-white mb-2">Design Driven</h3>
-                <p className="text-[12px] text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-white mb-2">Design Driven</h3>
+                <p className="text-sm text-[#525252] leading-relaxed">
                   Beautiful interfaces aren't optional. I believe good design is invisible and intuitive.
                 </p>
               </div>
@@ -86,8 +86,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.3}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🧩</div>
-                <h3 className="text-[14px] font-semibold text-white mb-2">Clean Architecture</h3>
-                <p className="text-[12px] text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-white mb-2">Clean Architecture</h3>
+                <p className="text-sm text-[#525252] leading-relaxed">
                   Maintainable code is a gift to your future self. I write code that reads like prose.
                 </p>
               </div>

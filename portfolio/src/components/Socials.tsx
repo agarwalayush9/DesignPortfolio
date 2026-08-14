@@ -29,10 +29,10 @@ function LinkedInIcon({ size = 16 }: { size?: number }) {
 }
 
 const socials = [
-  { name: 'GitHub', icon: GitHubIcon, href: '#' },
-  { name: 'Twitter / X', icon: TwitterIcon, href: '#' },
-  { name: 'LinkedIn', icon: LinkedInIcon, href: '#' },
-  { name: 'Email', icon: Mail, href: 'mailto:hello@ayush.dev' },
+  { name: 'GitHub', icon: GitHubIcon, href: 'https://github.com/agarwalayush9' },
+  { name: 'Twitter / X', icon: TwitterIcon, href: 'https://x.com/agarwalayush5' },
+  { name: 'LinkedIn', icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ayush-agarwal52/' },
+  { name: 'Email', icon: Mail, href: 'mailto:ayushagarwal.contact@gmail.com' },
 ];
 
 const containerVariants = {

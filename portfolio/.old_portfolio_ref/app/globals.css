@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+* {
+  @apply antialiased;
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #f5f5f5;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-50 min-h-screen transition-colors duration-300;
+}
+
+/* Dark mode is default, but support light mode toggle */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #09090b;
+  }
+
+  body {
+    @apply bg-white text-slate-950;
+  }
+}
+
+/* Smooth scrolling */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

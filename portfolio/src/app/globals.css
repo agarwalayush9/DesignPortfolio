@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050505;
+  --color-background: #030303;
   --color-foreground: #e5e5e5;
   --color-card: rgba(255, 255, 255, 0.02);
   --color-card-border: rgba(255, 255, 255, 0.06);
-  --color-accent: #22c55e;
-  --color-accent-glow: rgba(34, 197, 94, 0.15);
+  --color-accent: #8b5cf6;
+  --color-accent-glow: rgba(139, 92, 246, 0.2);
   --color-muted: #737373;
   --color-pill-bg: rgba(255, 255, 255, 0.04);
   --color-pill-border: rgba(255, 255, 255, 0.08);
@@ -147,7 +147,7 @@ body {
   width: 60vw;
   height: 60vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.07) 0%, transparent 70%);
   filter: blur(80px);
   animation: float 20s ease-in-out infinite;
 }
@@ -159,7 +159,7 @@ body {
   width: 50vw;
   height: 50vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.025) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
   filter: blur(100px);
   animation: float 25s ease-in-out infinite reverse;
 }
@@ -172,7 +172,7 @@ body {
   width: 40vw;
   height: 40vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.015) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.05) 0%, transparent 60%);
   filter: blur(60px);
   animation: float 18s ease-in-out infinite 3s;
 }
@@ -190,9 +190,8 @@ body {
   animation: grain 8s steps(10) infinite;
 }
 
-/* ===== SELECTION ===== */
 ::selection {
-  background-color: rgba(34, 197, 94, 0.3);
+  background-color: rgba(139, 92, 246, 0.3);
   color: #fff;
 }
 
@@ -252,9 +251,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(34, 197, 94, 0.15) 30%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(34, 197, 94, 0.15) 70%,
+    rgba(59, 130, 246, 0.3) 30%,
+    rgba(139, 92, 246, 0.3) 50%,
+    rgba(236, 72, 153, 0.3) 70%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -287,9 +286,9 @@ body {
 .text-gradient-accent {
   background: linear-gradient(
     135deg,
-    #22c55e 0%,
-    #4ade80 50%,
-    #22c55e 100%
+    #60a5fa 0%,
+    #a78bfa 50%,
+    #f472b6 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -360,7 +359,7 @@ body {
 
 /* ===== FOCUS STYLES ===== */
 *:focus-visible {
-  outline: 1px solid rgba(34, 197, 94, 0.5);
+  outline: 1px solid rgba(139, 92, 246, 0.5);
   outline-offset: 2px;
   border-radius: 4px;
 }

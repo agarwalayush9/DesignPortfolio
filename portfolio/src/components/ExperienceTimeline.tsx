@@ -5,28 +5,20 @@ import { TechPill } from './TechPills';
 
 const experienceData = [
   {
-    role: 'Full Stack Developer',
-    company: 'Stealth Startup',
-    date: '2024 — Present',
-    remote: true,
-    description: 'Building the next generation of developer tools with AI-powered workflows.',
-    techs: ['Next.js', 'TypeScript', 'PostgreSQL', 'Python'],
-  },
-  {
-    role: 'Frontend Engineer',
-    company: 'TechCorp',
-    date: '2023 — 2024',
-    remote: true,
-    description: 'Led the frontend architecture for a SaaS platform serving 50K+ users.',
-    techs: ['React', 'TypeScript', 'Tailwind', 'Node.js'],
-  },
-  {
-    role: 'Software Developer Intern',
-    company: 'StartupXYZ',
-    date: '2022 — 2023',
+    role: 'iOS App Developer Intern',
+    company: 'Quantum IT Innovation',
+    date: 'Jun 2025 — Sep 2025',
     remote: false,
-    description: 'Developed core features for an e-commerce platform.',
-    techs: ['React', 'Node.js', 'MongoDB'],
+    description: 'Built a real-time order tracking system using Google Maps SDK. Improved API reliability and developed reusable SwiftUI and UIKit components.',
+    techs: ['Swift', 'SwiftUI', 'UIKit'],
+  },
+  {
+    role: 'iOS App Developer Intern',
+    company: 'Infosys',
+    date: 'Jun 2024 — Jul 2024',
+    remote: false,
+    description: 'Developed a SwiftUI-based Library Management System integrated with Firebase backend services using MVVM architecture.',
+    techs: ['SwiftUI', 'Firebase'],
   },
 ];
 
@@ -58,19 +50,19 @@ export default function ExperienceTimeline() {
           <motion.div key={index} variants={itemVariants}>
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1 md:gap-4 mb-2">
               <div>
-                <h3 className="text-[15px] font-semibold text-[#e5e5e5] tracking-tight">{exp.role}</h3>
-                <div className="text-[13px] mt-0.5">
+                <h3 className="text-lg font-semibold text-[#e5e5e5] tracking-tight">{exp.role}</h3>
+                <div className="text-[15px] mt-0.5">
                   <span className="text-gradient-accent">{exp.company}</span>
                   {exp.remote && (
-                    <span className="text-[#333] ml-1.5"> · Remote</span>
+                    <span className="text-[#a3a3a3] ml-1.5"> · Remote</span>
                   )}
                 </div>
               </div>
-              <div className="text-[11px] text-[#404040] font-mono tracking-wider shrink-0">
+              <div className="text-[13px] text-[#808080] font-mono tracking-wider shrink-0">
                 {exp.date}
               </div>
             </div>
-            <p className="text-[13px] text-[#525252] mt-1.5 mb-3 leading-relaxed">
+            <p className="text-base text-[#a3a3a3] mt-2 mb-4 leading-relaxed">
               {exp.description}
             </p>
             <div className="flex flex-wrap gap-1.5">
