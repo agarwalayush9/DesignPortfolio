@@ -24,21 +24,25 @@ interface TechPillProps {
 }
 
 export function TechPill({ name }: TechPillProps) {
-  const color = techColors[name] || '#808080';
+  let color = techColors[name] || '#64748b';
+
+  // In light mode, white logos like Next.js should be black
+  if (color === '#ffffff' || color === '#e5e5e5') {
+    color = '#000000';
+  }
 
   return (
     <span 
       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[13px] font-medium transition-all duration-300 cursor-default"
       style={{ 
-        backgroundColor: color + '15',
-        border: `1px solid ${color}30`,
-        color: color !== '#ffffff' ? color : '#e5e5e5',
-        boxShadow: `0 0 12px ${color}10`
+        backgroundColor: color + '10', // 10% opacity for subtle tint
+        border: `1px solid ${color}25`,
+        color: '#334155', // slate-700 for readable text
       }}
     >
       <span
         className="w-1.5 h-1.5 rounded-full"
-        style={{ backgroundColor: color, boxShadow: `0 0 6px ${color}80` }}
+        style={{ backgroundColor: color }}
       />
       {name}
     </span>

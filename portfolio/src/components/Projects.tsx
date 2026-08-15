@@ -2,21 +2,31 @@
 
 import { motion } from 'framer-motion';
 import { TechPill } from './TechPills';
-import { ExternalLink, AppWindow } from 'lucide-react';
+import { ExternalLink, AppWindow, Code2 } from 'lucide-react';
 
 const projectsData = [
   {
     title: 'Cuddle Box',
-    description: 'Built and shipped a production iOS app for a sustainable resale marketplace. Developed 20+ screens with reusable components and integrated Firebase Auth/Firestore for real-time data.',
-    techs: ['Swift', 'UIKit', 'SwiftUI', 'Firebase'],
-    link: 'https://cuddlebox.com',
+    description: 'A sustainable resale marketplace on the App Store. Built with SwiftUI, UIKit, and Firebase for real-time listings and authentication.',
+    techs: ['SwiftUI', 'Firebase', 'MVVM'],
+    link: 'https://apps.apple.com/app/cuddle-box/id6751405151',
+    github: null,
     status: 'Live on App Store'
   },
   {
-    title: 'Full Stack Web Application',
-    description: 'Built a responsive web application with server-side rendering, REST APIs, and authentication flows. Designed modular UI components for scalability and maintainability.',
-    techs: ['React', 'Next.js', 'Node.js'],
+    title: 'Library Management System',
+    description: 'A scalable iOS app to manage library operations with real-time synchronization and user authentication across multiple devices.',
+    techs: ['SwiftUI', 'Firebase', 'Core Data'],
     link: '#',
+    github: 'https://github.com/agarwalayush9',
+    status: 'Completed'
+  },
+  {
+    title: 'Real-Time Order Tracking',
+    description: 'A real-time delivery tracking system using Google Maps SDK with advanced error handling and resilient networking practices.',
+    techs: ['Swift', 'Google Maps API', 'REST'],
+    link: '#',
+    github: 'https://github.com/agarwalayush9',
     status: 'Completed'
   }
 ];
@@ -61,14 +71,28 @@ export default function Projects() {
                   <div className="text-[13px] text-gradient-accent mt-0.5">{project.status}</div>
                 </div>
               </div>
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 group-hover:bg-gray-100 group-hover:text-slate-900 transition-all"
-              >
-                <ExternalLink size={14} />
-              </a>
+              <div className="flex gap-2">
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition-all"
+                  >
+                    <Code2 size={14} />
+                  </a>
+                )}
+                {project.link !== '#' && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition-all"
+                  >
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
             </div>
             
             <p className="text-base text-gray-600 mb-5 leading-relaxed">

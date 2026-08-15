@@ -30,7 +30,7 @@ function ForkIcon({ size = 12 }: { size?: number }) {
   );
 }
 
-const categories = ['All', 'Frontend', 'Full Stack', 'Open Source'];
+const categories = ['All', 'Frontend', 'Full Stack', 'Open Source', 'UI Mockups'];
 
 const projects = [
   {
@@ -42,6 +42,7 @@ const projects = [
     forks: 12,
     gradient: 'from-blue-50 to-indigo-50',
     accentColor: '#8b5cf6',
+    liveUrl: 'https://apps.apple.com/app/cuddle-box/id6751405151',
   },
   {
     title: 'Library Management System',
@@ -63,10 +64,46 @@ const projects = [
     gradient: 'from-amber-50 to-orange-50',
     accentColor: '#f59e0b',
   },
+  {
+    title: 'Mercel Bento Dashboard',
+    description: 'A replication of a famous UI creator\'s intricate bento grid dashboard, focusing on layout and responsiveness.',
+    category: 'UI Mockups',
+    techs: ['React', 'Next.js', 'Tailwind'],
+    github: 'https://github.com/agarwalayush9/FrontendAssignment/tree/main/Mercel/bento-dashboard',
+    liveUrl: 'https://frontend-assignment-2ojj.vercel.app/',
+    stars: 10,
+    forks: 2,
+    gradient: 'from-blue-50 to-sky-50',
+    accentColor: '#3b82f6',
+  },
+  {
+    title: 'Productivity Dashboard',
+    description: 'A sleek, modern dashboard UI designed to track habits, tasks, and analytics with fluid animations.',
+    category: 'UI Mockups',
+    techs: ['React', 'Next.js', 'Tailwind'],
+    github: 'https://github.com/agarwalayush9/ProductivityDashboard',
+    liveUrl: 'https://productivity-dashboard-tan-two.vercel.app/',
+    stars: 15,
+    forks: 5,
+    gradient: 'from-purple-50 to-fuchsia-50',
+    accentColor: '#9333ea',
+  },
+  {
+    title: 'Finance Planner',
+    description: 'A complex financial planner UI featuring interactive charts, data tables, and a premium dark mode aesthetic.',
+    category: 'UI Mockups',
+    techs: ['React', 'Next.js', 'Tailwind'],
+    github: 'https://github.com/agarwalayush9/FinancePlanner',
+    liveUrl: 'https://finance-planner-u7lu-47no9ptnx-agarwalayush9s-projects.vercel.app',
+    stars: 18,
+    forks: 4,
+    gradient: 'from-emerald-50 to-teal-50',
+    accentColor: '#059669',
+  },
 ];
 
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('UI Mockups');
 
   const filtered = activeCategory === 'All'
     ? projects
@@ -160,10 +197,10 @@ export default function ProjectsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
+                        <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
                           <GithubIcon size={16} />
                         </a>
-                        <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
+                        <a href={project.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
                           <ExternalLink size={16} />
                         </a>
                       </div>
@@ -186,17 +223,6 @@ export default function ProjectsPage() {
                       ))}
                     </div>
 
-                    {/* Stats */}
-                    <div className="flex items-center gap-4 text-sm text-gray-500 font-mono">
-                      <span className="flex items-center gap-1">
-                        <StarIcon size={12} />
-                        {project.stars.toLocaleString()}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <ForkIcon size={12} />
-                        {project.forks}
-                      </span>
-                    </div>
                   </div>
                 </TiltCard>
               </motion.div>

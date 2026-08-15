@@ -31,13 +31,13 @@ export default function ContactPage() {
         >
           <h2 className="section-label mb-4">CONTACT</h2>
           <h1 className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tight mb-6">
-            <span className="text-gradient">Let's work</span>
+            <span className="text-gradient">Let&apos;s work</span>
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>together</span>
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-            Have a project in mind or just want to chat? I'd love to hear from you.
-            Drop me a message and I'll get back within 24 hours.
+            Have a project in mind or just want to chat? I&apos;d love to hear from you.
+            Drop me a message and I&apos;ll get back within 24 hours.
           </p>
         </motion.div>
 

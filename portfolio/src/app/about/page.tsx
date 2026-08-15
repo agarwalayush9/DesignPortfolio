@@ -79,7 +79,7 @@ export default function AboutPage() {
                 <div className="text-2xl mb-3">🎨</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Design Driven</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Beautiful interfaces aren't optional. I believe good design is invisible and intuitive.
+                  Beautiful interfaces aren&apos;t optional. I believe good design is invisible and intuitive.
                 </p>
               </div>
             </BentoCard>

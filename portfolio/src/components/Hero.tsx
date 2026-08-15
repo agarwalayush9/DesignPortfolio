@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Calendar, Mail, Copy, Check, MapPin, Clock } from "lucide-react";
 import { TechPill } from "./TechPills";
 
@@ -50,8 +51,8 @@ export default function Hero() {
         <div className="relative group">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[#22c55e]/20 via-transparent to-[#6366f1]/20 blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative w-[72px] h-[72px] rounded-full border border-[rgba(0,0,0,0.12)] p-[3px]">
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-[#6366f1] via-[#8b5cf6] to-[#06b6d4] flex items-center justify-center">
-              <span className="text-gray-900 text-xl font-semibold tracking-tight">AA</span>
+            <div className="relative w-full h-full rounded-full flex items-center justify-center overflow-hidden bg-gray-50">
+              <Image src="/profile.png" alt="Ayush Agarwal" fill className="object-cover" />
             </div>
           </div>
           {/* Status dot */}
@@ -112,10 +113,13 @@ export default function Hero() {
           <Calendar className="w-[15px] h-[15px]" />
           Book a Call
         </button>
-        <button className="btn-secondary flex items-center gap-2.5 px-7 py-3 text-sm">
+        <a 
+          href={`mailto:${email}`}
+          className="btn-secondary flex items-center gap-2.5 px-7 py-3 text-sm"
+        >
           <Mail className="w-[15px] h-[15px]" />
           Send Email
-        </button>
+        </a>
 
         {/* Copy email */}
         <div className="relative">

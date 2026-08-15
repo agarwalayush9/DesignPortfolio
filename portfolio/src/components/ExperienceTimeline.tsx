@@ -5,6 +5,14 @@ import { TechPill } from './TechPills';
 
 const experienceData = [
   {
+    role: 'Freelance Software Developer',
+    company: 'Self-Employed',
+    date: 'Sep 2025 — Present',
+    remote: true,
+    description: 'Designed and developed modern, high-performance web applications for various clients. Focused on premium UI/UX, responsive layouts, and modern frontend architectures.',
+    techs: ['React', 'Next.js', 'Tailwind', 'Swift'],
+  },
+  {
     role: 'iOS App Developer Intern',
     company: 'Quantum IT Innovation',
     date: 'Jun 2025 — Sep 2025',
