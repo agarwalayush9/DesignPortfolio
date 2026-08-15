@@ -51,15 +51,15 @@ export default function AboutPage() {
         <div className="mb-20">
           <h2 className="section-label mb-5 text-sm">TECH STACK</h2>
           <div className="space-y-4">
-            <Marquee items={techStack.slice(0, 8)} speed={35} />
-            <Marquee items={techStack.slice(8)} speed={35} reverse />
+            <Marquee items={techStack.slice(0, 8)} speed={30} />
+            <Marquee items={techStack.slice(8)} speed={30} reverse />
           </div>
         </div>
 
         {/* Tools Marquee */}
         <div className="mb-20">
           <h2 className="section-label mb-5 text-sm">TOOLS I USE</h2>
-          <Marquee items={tools} speed={40} />
+          <Marquee items={tools} speed={35} />
         </div>
 
         {/* Philosophy */}

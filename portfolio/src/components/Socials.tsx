@@ -50,7 +50,6 @@ export default function Socials() {
   return (
     <div className="flex flex-wrap gap-2">
       {socials.map((social) => {
-        if (social.name === 'Email') return null;
         const Icon = social.icon;
         return (
           <LinkPreview key={social.name} url={social.href}>

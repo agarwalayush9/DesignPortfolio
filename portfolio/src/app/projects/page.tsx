@@ -54,6 +54,7 @@ const projects = [
     forks: 24,
     gradient: 'from-green-50 to-emerald-50',
     accentColor: '#22c55e',
+    github: 'https://github.com/agarwalayush9/Shelves-Admin',
   },
   {
     title: 'Real-Time Order Tracking',

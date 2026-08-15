@@ -59,7 +59,7 @@ export default function Hero() {
             </div>
           </div>
           {/* Status dot */}
-          <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+          <div className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-white flex items-center justify-center">
             <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
           </div>
         </div>
@@ -107,49 +107,12 @@ export default function Hero() {
 
       {/* CTA Row */}
       <motion.div
-        className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full"
+        className="flex items-center gap-3 w-full"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...transition, delay: 0.4 }}
       >
-
-        <div className="flex items-center gap-2 w-full sm:w-auto">
-          {/* Social Links */}
-          <Socials />
-
-          <a 
-            href={`mailto:${email}`}
-            className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2.5 px-7 py-3 text-sm"
-          >
-            <Mail className="w-[15px] h-[15px]" />
-            Send Email
-          </a>
-
-          {/* Copy email */}
-          <div className="relative shrink-0">
-            <button
-              onClick={handleCopy}
-              className="group w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow"
-              aria-label="Copy email address"
-            >
-              {copied ? (
-                <Check className="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#22c55e]" />
-              ) : (
-                <Copy className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-              )}
-            </button>
-            {copied && (
-              <motion.div
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="absolute -top-10 left-1/2 -translate-x-1/2 glass-card text-[11px] text-[#22c55e] py-1 px-2.5 rounded-md whitespace-nowrap"
-              >
-                Copied!
-              </motion.div>
-            )}
-          </div>
-        </div>
+        <Socials />
       </motion.div>
     </div>
   );
