@@ -43,7 +43,7 @@ export default function AnimatedCounter({ target, suffix = '', label, duration =
       <div className="text-3xl md:text-4xl font-serif font-black text-gradient tracking-tight">
         {count}{suffix}
       </div>
-      <div className="text-[11px] font-mono tracking-wider text-[#404040] mt-2 uppercase">
+      <div className="text-[11px] font-mono tracking-wider text-gray-500 mt-2 uppercase">
         {label}
       </div>
     </motion.div>

@@ -67,7 +67,7 @@ export default function Socials() {
               variants={itemVariants}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
-              className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.05)] text-[13px] text-[#606060] hover:text-[#d4d4d4] hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.12)] transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+              className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-gray-200 text-[13px] text-slate-600 hover:text-slate-900 hover:border-gray-300 transition-all duration-300 hover:shadow-sm"
             >
               <Icon size={15} />
               <span className="tracking-wide">{social.name}</span>

@@ -50,19 +50,19 @@ export default function ExperienceTimeline() {
           <motion.div key={index} variants={itemVariants}>
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1 md:gap-4 mb-2">
               <div>
-                <h3 className="text-lg font-semibold text-[#e5e5e5] tracking-tight">{exp.role}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 tracking-tight">{exp.role}</h3>
                 <div className="text-[15px] mt-0.5">
                   <span className="text-gradient-accent">{exp.company}</span>
                   {exp.remote && (
-                    <span className="text-[#a3a3a3] ml-1.5"> · Remote</span>
+                    <span className="text-gray-600 ml-1.5"> · Remote</span>
                   )}
                 </div>
               </div>
-              <div className="text-[13px] text-[#808080] font-mono tracking-wider shrink-0">
+              <div className="text-[13px] text-gray-500 font-mono tracking-wider shrink-0">
                 {exp.date}
               </div>
             </div>
-            <p className="text-base text-[#a3a3a3] mt-2 mb-4 leading-relaxed">
+            <p className="text-base text-gray-600 mt-2 mb-4 leading-relaxed">
               {exp.description}
             </p>
             <div className="flex flex-wrap gap-1.5">
@@ -72,7 +72,7 @@ export default function ExperienceTimeline() {
             </div>
 
             {index < experienceData.length - 1 && (
-              <div className="border-t border-[rgba(255,255,255,0.04)] my-6" />
+              <div className="border-t border-[rgba(0,0,0,0.06)] my-6" />
             )}
           </motion.div>
         ))}

@@ -32,7 +32,7 @@ export default function FloatingDock() {
             <Link key={item.href} href={item.href}>
               <motion.div
                 className={`relative p-2.5 rounded-xl transition-colors duration-200 focus:outline-none group ${
-                  isActive ? 'text-white' : 'text-[#525252] hover:text-white'
+                  isActive ? 'text-gray-900' : 'text-[#525252] hover:text-gray-900'
                 }`}
                 whileHover={{ scale: 1.15, y: -3 }}
                 whileTap={{ scale: 0.95 }}
@@ -42,12 +42,12 @@ export default function FloatingDock() {
                 {isActive && (
                   <motion.div
                     layoutId="dock-active"
-                    className="absolute inset-0 rounded-xl bg-[rgba(255,255,255,0.08)]"
+                    className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.12)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
                 {/* Hover background glow */}
-                <div className="absolute inset-0 rounded-xl bg-[rgba(255,255,255,0.06)] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.09)] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 <Icon size={18} className="relative z-10" />
               </motion.div>
             </Link>

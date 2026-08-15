@@ -49,15 +49,15 @@ export default function Projects() {
           <motion.div 
             key={index} 
             variants={itemVariants}
-            className="group relative p-5 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.04)] hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.12)] hover:shadow-[0_4px_24px_rgba(0,0,0,0.2)] transition-all duration-300"
+            className="group relative p-5 rounded-2xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm"
           >
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.1)] flex items-center justify-center text-white shadow-inner">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(0,0,0,0.12)] to-[rgba(0,0,0,0.03)] border border-[rgba(0,0,0,0.15)] flex items-center justify-center text-gray-900 shadow-inner">
                   <AppWindow size={18} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#e5e5e5] tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 tracking-tight group-hover:text-gray-900 transition-colors">{project.title}</h3>
                   <div className="text-[13px] text-gradient-accent mt-0.5">{project.status}</div>
                 </div>
               </div>
@@ -65,13 +65,13 @@ export default function Projects() {
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[#a3a3a3] hover:text-white hover:bg-[rgba(255,255,255,0.15)] transition-all"
+                className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 group-hover:bg-gray-100 group-hover:text-slate-900 transition-all"
               >
                 <ExternalLink size={14} />
               </a>
             </div>
             
-            <p className="text-base text-[#a3a3a3] mb-5 leading-relaxed">
+            <p className="text-base text-gray-600 mb-5 leading-relaxed">
               {project.description}
             </p>
             

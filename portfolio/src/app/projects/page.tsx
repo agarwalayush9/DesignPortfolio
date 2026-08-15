@@ -40,7 +40,7 @@ const projects = [
     techs: ['SwiftUI', 'Firebase', 'MVVM'],
     stars: 124,
     forks: 12,
-    gradient: 'from-[#6366f1]/10 to-[#8b5cf6]/5',
+    gradient: 'from-blue-50 to-indigo-50',
     accentColor: '#8b5cf6',
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     techs: ['SwiftUI', 'Firebase', 'Core Data'],
     stars: 89,
     forks: 24,
-    gradient: 'from-[#22c55e]/10 to-[#4ade80]/5',
+    gradient: 'from-green-50 to-emerald-50',
     accentColor: '#22c55e',
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     techs: ['Swift', 'Google Maps API', 'REST'],
     stars: 156,
     forks: 34,
-    gradient: 'from-[#f59e0b]/10 to-[#fbbf24]/5',
+    gradient: 'from-amber-50 to-orange-50',
     accentColor: '#f59e0b',
   },
 ];
@@ -88,7 +88,7 @@ export default function ProjectsPage() {
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>Built</span>
           </h1>
-          <p className="text-lg text-[#606060] leading-relaxed max-w-lg">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
             A collection of projects that showcase my skills in frontend development,
             full-stack engineering, and open-source contributions.
           </p>
@@ -107,14 +107,14 @@ export default function ProjectsPage() {
               onClick={() => setActiveCategory(cat)}
               className={`relative px-4 py-2 rounded-full text-base font-medium transition-colors duration-200 ${
                 activeCategory === cat
-                  ? 'text-white'
-                  : 'text-[#525252] hover:text-[#a3a3a3]'
+                  ? 'text-gray-900'
+                  : 'text-gray-600 hover:text-gray-800'
               }`}
             >
               {activeCategory === cat && (
                 <motion.div
                   layoutId="category-pill"
-                  className="absolute inset-0 rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.1)]"
+                  className="absolute inset-0 rounded-full bg-[rgba(0,0,0,0.12)] border border-[rgba(0,0,0,0.15)]"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               )}
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-semibold text-white tracking-tight mb-1">
+                        <h3 className="text-xl font-semibold text-gray-900 tracking-tight mb-1">
                           {project.title}
                         </h3>
                         <span
@@ -160,17 +160,17 @@ export default function ProjectsPage() {
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <a href="#" className="text-[#404040] hover:text-white transition-colors">
+                        <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
                           <GithubIcon size={16} />
                         </a>
-                        <a href="#" className="text-[#404040] hover:text-white transition-colors">
+                        <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors">
                           <ExternalLink size={16} />
                         </a>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-base text-[#606060] leading-relaxed mb-5">
+                    <p className="text-base text-gray-600 leading-relaxed mb-5">
                       {project.description}
                     </p>
 
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
                       {project.techs.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-mono tracking-wide px-2 py-0.5 rounded-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] text-[#525252]"
+                          className="text-xs font-mono tracking-wide px-2 py-0.5 rounded-full bg-[rgba(0,0,0,0.045)] border border-[rgba(0,0,0,0.09)] text-gray-600"
                         >
                           {tech}
                         </span>
@@ -187,7 +187,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Stats */}
-                    <div className="flex items-center gap-4 text-sm text-[#404040] font-mono">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 font-mono">
                       <span className="flex items-center gap-1">
                         <StarIcon size={12} />
                         {project.stars.toLocaleString()}

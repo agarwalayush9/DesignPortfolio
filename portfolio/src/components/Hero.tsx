@@ -27,13 +27,13 @@ export default function Hero() {
         transition={{ ...transition, delay: 0 }}
       >
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-[#a3a3a3]">
-            <MapPin size={14} className="text-[#a3a3a3]" />
+          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-gray-600">
+            <MapPin size={14} className="text-gray-600" />
             <span>INDIA</span>
           </div>
-          <div className="w-px h-4 bg-[rgba(255,255,255,0.15)]" />
-          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-[#a3a3a3]">
-            <Clock size={14} className="text-[#a3a3a3]" />
+          <div className="w-px h-4 bg-[rgba(0,0,0,0.225)]" />
+          <div className="flex items-center gap-1.5 text-sm font-mono tracking-wide text-gray-600">
+            <Clock size={14} className="text-gray-600" />
             <span>{new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false })}</span>
           </div>
         </div>
@@ -49,20 +49,20 @@ export default function Hero() {
         {/* Avatar with glow ring */}
         <div className="relative group">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[#22c55e]/20 via-transparent to-[#6366f1]/20 blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="relative w-[72px] h-[72px] rounded-full border border-[rgba(255,255,255,0.08)] p-[3px]">
+          <div className="relative w-[72px] h-[72px] rounded-full border border-[rgba(0,0,0,0.12)] p-[3px]">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-[#6366f1] via-[#8b5cf6] to-[#06b6d4] flex items-center justify-center">
-              <span className="text-white text-xl font-semibold tracking-tight">AA</span>
+              <span className="text-gray-900 text-xl font-semibold tracking-tight">AA</span>
             </div>
           </div>
           {/* Status dot */}
-          <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#030303] flex items-center justify-center">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e] animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+          <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-white flex items-center justify-center">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e] shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
           </div>
         </div>
 
         <div>
-          <h1 className="text-2xl font-semibold text-white tracking-tight mb-1">Ayush Agarwal</h1>
-          <p className="text-[15px] text-[#808080]">
+          <h1 className="text-2xl font-semibold text-gray-900 tracking-tight mb-1">Ayush Agarwal</h1>
+          <p className="text-[15px] text-gray-500">
             Available for work
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function Hero() {
         transition={{ ...transition, delay: 0.3 }}
         className="max-w-xl mb-12"
       >
-        <p className="text-lg text-[#a3a3a3] leading-[1.8] tracking-wide">
+        <p className="text-lg text-gray-600 leading-[1.8] tracking-wide">
           I craft beautiful, performant web and iOS experiences.
           Passionate about clean code, intuitive design, and building products that make a difference using{" "}
           <span className="inline-flex align-middle mx-0.5"><TechPill name="Swift" /></span>,{" "}
@@ -121,7 +121,7 @@ export default function Hero() {
         <div className="relative">
           <button
             onClick={handleCopy}
-            className="group w-10 h-10 rounded-full border border-[rgba(255,255,255,0.06)] flex items-center justify-center text-[#525252] hover:text-white hover:border-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.03)] transition-all duration-300"
+            className="group w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow"
             aria-label="Copy email address"
           >
             {copied ? (

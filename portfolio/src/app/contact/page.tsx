@@ -35,7 +35,7 @@ export default function ContactPage() {
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>together</span>
           </h1>
-          <p className="text-lg text-[#606060] leading-relaxed max-w-lg">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
             Have a project in mind or just want to chat? I'd love to hear from you.
             Drop me a message and I'll get back within 24 hours.
           </p>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 {/* Name */}
                 <div className="relative">
                   <motion.label
-                    className="absolute left-0 text-sm font-mono tracking-wider text-[#404040] transition-all pointer-events-none"
+                    className="absolute left-0 text-sm font-mono tracking-wider text-gray-500 transition-all pointer-events-none"
                     animate={{
                       y: focused === 'name' ? -8 : 8,
                       fontSize: focused === 'name' ? '10px' : '12px',
@@ -68,14 +68,14 @@ export default function ContactPage() {
                     type="text"
                     onFocus={() => setFocused('name')}
                     onBlur={(e) => !e.target.value && setFocused(null)}
-                    className="w-full bg-transparent border-b border-[rgba(255,255,255,0.06)] focus:border-[#22c55e] text-white text-lg py-3 pt-6 outline-none transition-colors duration-300"
+                    className="w-full bg-transparent border-b border-[rgba(0,0,0,0.09)] focus:border-[#22c55e] text-gray-900 text-lg py-3 pt-6 outline-none transition-colors duration-300"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="relative">
                   <motion.label
-                    className="absolute left-0 text-sm font-mono tracking-wider text-[#404040] transition-all pointer-events-none"
+                    className="absolute left-0 text-sm font-mono tracking-wider text-gray-500 transition-all pointer-events-none"
                     animate={{
                       y: focused === 'email' ? -8 : 8,
                       fontSize: focused === 'email' ? '10px' : '12px',
@@ -89,14 +89,14 @@ export default function ContactPage() {
                     type="email"
                     onFocus={() => setFocused('email')}
                     onBlur={(e) => !e.target.value && setFocused(null)}
-                    className="w-full bg-transparent border-b border-[rgba(255,255,255,0.06)] focus:border-[#22c55e] text-white text-lg py-3 pt-6 outline-none transition-colors duration-300"
+                    className="w-full bg-transparent border-b border-[rgba(0,0,0,0.09)] focus:border-[#22c55e] text-gray-900 text-lg py-3 pt-6 outline-none transition-colors duration-300"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="relative">
                   <motion.label
-                    className="absolute left-0 text-sm font-mono tracking-wider text-[#404040] transition-all pointer-events-none"
+                    className="absolute left-0 text-sm font-mono tracking-wider text-gray-500 transition-all pointer-events-none"
                     animate={{
                       y: focused === 'message' ? -8 : 8,
                       fontSize: focused === 'message' ? '10px' : '12px',
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     rows={4}
                     onFocus={() => setFocused('message')}
                     onBlur={(e) => !e.target.value && setFocused(null)}
-                    className="w-full bg-transparent border-b border-[rgba(255,255,255,0.06)] focus:border-[#22c55e] text-white text-lg py-3 pt-6 outline-none transition-colors duration-300 resize-none"
+                    className="w-full bg-transparent border-b border-[rgba(0,0,0,0.09)] focus:border-[#22c55e] text-gray-900 text-lg py-3 pt-6 outline-none transition-colors duration-300 resize-none"
                   />
                 </div>
 
@@ -152,8 +152,8 @@ export default function ContactPage() {
                   <Mail size={18} className="text-[#22c55e]" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-white mb-1">Email</h3>
-                  <p className="text-sm text-[#525252] font-mono">ayushagarwal.contact@gmail.com</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Email</h3>
+                  <p className="text-sm text-gray-600 font-mono">ayushagarwal.contact@gmail.com</p>
                 </div>
               </div>
             </BentoCard>
@@ -164,8 +164,8 @@ export default function ContactPage() {
                   <MapPin size={18} className="text-[#6366f1]" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-white mb-1">Location</h3>
-                  <p className="text-sm text-[#525252] font-mono">India · IST (UTC+5:30)</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Location</h3>
+                  <p className="text-sm text-gray-600 font-mono">India · IST (UTC+5:30)</p>
                 </div>
               </div>
             </BentoCard>
@@ -176,8 +176,8 @@ export default function ContactPage() {
                   <Clock size={18} className="text-[#f59e0b]" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-white mb-1">Availability</h3>
-                  <p className="text-sm text-[#525252] font-mono">Open for freelance & full-time</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Availability</h3>
+                  <p className="text-sm text-gray-600 font-mono">Open for freelance & full-time</p>
                 </div>
               </div>
             </BentoCard>
@@ -188,10 +188,10 @@ export default function ContactPage() {
                 className="flex items-center justify-between group"
               >
                 <div>
-                  <h3 className="text-base font-semibold text-white mb-1">Book a 30-min call</h3>
-                  <p className="text-sm text-[#525252] font-mono">Via Cal.com</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Book a 30-min call</h3>
+                  <p className="text-sm text-gray-600 font-mono">Via Cal.com</p>
                 </div>
-                <ArrowUpRight size={18} className="text-[#404040] group-hover:text-white group-hover:rotate-45 transition-all duration-300" />
+                <ArrowUpRight size={18} className="text-gray-500 group-hover:text-gray-900 group-hover:rotate-45 transition-all duration-300" />
               </a>
             </BentoCard>
           </motion.div>

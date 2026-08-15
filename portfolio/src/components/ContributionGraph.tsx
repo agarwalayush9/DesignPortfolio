@@ -14,7 +14,7 @@ const getLevel = (seed: number) => {
 };
 
 const levelColors = [
-  'bg-[rgba(255,255,255,0.02)]',
+  'bg-[rgba(0,0,0,0.03)]',
   'bg-[#0e4429]',
   'bg-[#006d32]',
   'bg-[#26a641]',
@@ -56,7 +56,7 @@ export default function ContributionGraph() {
   return (
     <section>
       <h2 className="section-label mb-4">ACTIVITY</h2>
-      <p className="text-[12px] text-[#404040] font-mono tracking-wide mb-5">
+      <p className="text-[12px] text-gray-500 font-mono tracking-wide mb-5">
         {totalContributions} contributions in the last year
       </p>
 
@@ -71,7 +71,7 @@ export default function ContributionGraph() {
           {/* Day Labels */}
           <div className="flex flex-col gap-[3px] pt-[18px] pr-2 shrink-0">
             {['', 'Mon', '', 'Wed', '', 'Fri', ''].map((day, i) => (
-              <div key={i} className="text-[9px] text-[#333] font-mono h-[10px] leading-[10px] tracking-wider">
+              <div key={i} className="text-[9px] text-gray-500 font-mono h-[10px] leading-[10px] tracking-wider">
                 {day}
               </div>
             ))}
@@ -79,7 +79,7 @@ export default function ContributionGraph() {
 
           <div className="flex flex-col gap-1.5">
             {/* Month Labels */}
-            <div className="flex text-[9px] text-[#333] font-mono justify-between px-0.5 tracking-wider">
+            <div className="flex text-[9px] text-gray-500 font-mono justify-between px-0.5 tracking-wider">
               {months.map((m) => (
                 <div key={m}>{m}</div>
               ))}

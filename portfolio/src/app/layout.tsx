@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen bg-[#030303] text-foreground font-sans antialiased">
+      <body className="min-h-screen bg-white text-foreground font-sans antialiased">
         <BackgroundLayers />
         <div className="relative z-10 min-h-screen pb-32">
           {children}

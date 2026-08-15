@@ -71,7 +71,7 @@ export default function BlogPage() {
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>Writings</span>
           </h1>
-          <p className="text-lg text-[#606060] leading-relaxed max-w-lg">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
             I write about frontend engineering, design systems, and the intersection
             of technology and creativity on Medium.
           </p>
@@ -79,7 +79,7 @@ export default function BlogPage() {
 
         {/* Loading State */}
         {isLoading && (
-          <div className="flex items-center justify-center py-20 text-[#606060]">
+          <div className="flex items-center justify-center py-20 text-gray-600">
             <Loader2 className="w-8 h-8 animate-spin" />
           </div>
         )}
@@ -102,7 +102,7 @@ export default function BlogPage() {
                   key={post.id}
                   variants={itemVariants}
                   whileHover={{ x: 6 }}
-                  className="group relative block glass-card rounded-xl p-5 cursor-pointer transition-all duration-300 hover:border-[rgba(255,255,255,0.12)]"
+                  className="group relative block glass-card rounded-xl p-5 cursor-pointer transition-all duration-300 hover:border-[rgba(0,0,0,0.18)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
@@ -119,17 +119,17 @@ export default function BlogPage() {
                       </span>
 
                       {/* Title */}
-                      <h3 className="text-xl font-semibold text-[#d4d4d4] group-hover:text-white tracking-tight mb-2 transition-colors duration-200">
+                      <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-900 tracking-tight mb-2 transition-colors duration-200">
                         {post.title}
                       </h3>
 
                       {/* Excerpt */}
-                      <p className="text-base text-[#525252] leading-relaxed mb-3 line-clamp-2">
+                      <p className="text-base text-gray-600 leading-relaxed mb-3 line-clamp-2">
                         {post.excerpt}
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center gap-3 text-sm font-mono text-[#404040] tracking-wide">
+                      <div className="flex items-center gap-3 text-sm font-mono text-gray-500 tracking-wide">
                         <span className="flex items-center gap-1">
                           <Calendar size={11} />
                           {post.date}
@@ -143,7 +143,7 @@ export default function BlogPage() {
 
                     {/* Arrow */}
                     <motion.div
-                      className="mt-2 text-[#333] group-hover:text-white transition-colors"
+                      className="mt-2 text-gray-500 group-hover:text-gray-900 transition-colors"
                       initial={{ opacity: 0, x: -5 }}
                       whileHover={{ opacity: 1 }}
                     >

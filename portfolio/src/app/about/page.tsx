@@ -68,8 +68,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.1}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">⚡</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Performance First</h3>
-                <p className="text-sm text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance First</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Every millisecond matters. I obsess over Core Web Vitals and user-perceived performance.
                 </p>
               </div>
@@ -77,8 +77,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.2}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🎨</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Design Driven</h3>
-                <p className="text-sm text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Design Driven</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Beautiful interfaces aren't optional. I believe good design is invisible and intuitive.
                 </p>
               </div>
@@ -86,8 +86,8 @@ export default function AboutPage() {
             <BentoCard hover delay={0.3}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🧩</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Clean Architecture</h3>
-                <p className="text-sm text-[#525252] leading-relaxed">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Clean Architecture</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Maintainable code is a gift to your future self. I write code that reads like prose.
                 </p>
               </div>

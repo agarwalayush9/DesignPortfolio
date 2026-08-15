@@ -31,8 +31,8 @@ export default function PageViewCounter() {
       transition={{ duration: 0.8, delay: 1 }}
       className="glass-card flex items-center gap-2 px-3 py-1.5 rounded-full"
     >
-      <Eye size={12} className="text-[#404040]" />
-      <span className="text-[10px] font-mono tracking-wider text-[#404040]">
+      <Eye size={12} className="text-gray-500" />
+      <span className="text-[10px] font-mono tracking-wider text-gray-500">
         {views > 0 ? views.toLocaleString() : '---'}
       </span>
     </motion.div>
