@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import TiltCard from '@/components/TiltCard';
 import PageTransition from '@/components/PageTransition';
+import { LinkPreview } from '@/components/LinkPreview';
 
 function GithubIcon({ size = 16 }: { size?: number }) {
   return (
@@ -63,6 +64,7 @@ const projects = [
     forks: 34,
     gradient: 'from-amber-50 to-orange-50',
     accentColor: '#f59e0b',
+    liveUrl: 'https://apps.apple.com/in/app/fisho-ae/id6749234811',
   },
   {
     title: 'Mercel Bento Dashboard',
@@ -182,13 +184,21 @@ export default function ProjectsPage() {
                           {project.category.toUpperCase()}
                         </span>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <a href={project.github || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
-                          <GithubIcon size={16} />
-                        </a>
-                        <a href={project.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors">
-                          <ExternalLink size={16} />
-                        </a>
+                      <div className="flex items-center gap-4">
+                        {project.github && (
+                          <LinkPreview url={project.github}>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
+                              <GithubIcon size={16} />
+                            </a>
+                          </LinkPreview>
+                        )}
+                        {project.liveUrl && (
+                          <LinkPreview url={project.liveUrl}>
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
+                              <ExternalLink size={16} />
+                            </a>
+                          </LinkPreview>
+                        )}
                       </div>
                     </div>
 

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import { LinkPreview } from './LinkPreview';
 
 function GitHubIcon({ size = 16 }: { size?: number }) {
   return (
@@ -52,16 +53,17 @@ export default function Socials() {
         if (social.name === 'Email') return null;
         const Icon = social.icon;
         return (
-          <a
-            key={social.name}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow group"
-            aria-label={social.name}
-          >
-            <Icon size={16} className="group-hover:scale-110 transition-transform duration-300" />
-          </a>
+          <LinkPreview key={social.name} url={social.href}>
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow group"
+              aria-label={social.name}
+            >
+              <Icon size={16} className="group-hover:scale-110 transition-transform duration-300" />
+            </a>
+          </LinkPreview>
         );
       })}
     </div>

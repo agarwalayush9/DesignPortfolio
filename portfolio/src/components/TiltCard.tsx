@@ -46,7 +46,7 @@ export default function TiltCard({ children, className = '' }: TiltCardProps) {
         perspective: 1000,
       }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className={`relative glass-card shimmer-border rounded-2xl overflow-hidden group cursor-pointer ${className}`}
+      className={`relative glass-card shimmer-border rounded-2xl group cursor-pointer ${className}`}
     >
       {/* Glare effect */}
       <div

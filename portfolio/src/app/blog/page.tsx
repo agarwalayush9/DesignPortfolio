@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Clock, Calendar, Loader2 } from 'lucide-react';
 import PageTransition from '@/components/PageTransition';
+import { LinkPreview } from '@/components/LinkPreview';
 
 interface BlogPost {
   id: string;
@@ -90,11 +91,11 @@ export default function BlogPage() {
             {posts.map((post) => {
               const tagColor = getTagColor(post.category);
               return (
-                <a
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={post.id}
+                <LinkPreview key={post.id} url={post.link} className="relative block w-full">
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   className="group relative block glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 shimmer-border"
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -145,7 +146,8 @@ export default function BlogPage() {
                     whileHover={{ scaleY: 1 }}
                     transition={{ duration: 0.3 }}
                   />
-                </a>
+                  </a>
+                </LinkPreview>
               );
             })}
           </div>
