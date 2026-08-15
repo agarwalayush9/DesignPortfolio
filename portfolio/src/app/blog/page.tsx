@@ -57,7 +57,7 @@ export default function BlogPage() {
 
   return (
     <PageTransition>
-      <div className="max-w-3xl mx-auto px-6 pt-24 pb-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-24 pb-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,13 +65,13 @@ export default function BlogPage() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <h2 className="section-label mb-4">BLOG</h2>
-          <h1 className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tight mb-6">
+          <h2 className="section-label mb-4 text-sm">BLOG</h2>
+          <h1 className="font-serif text-4xl md:text-5xl font-black leading-tight tracking-tight mb-5">
             <span className="text-gradient">Thoughts &</span>
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>Writings</span>
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+          <p className="text-sm text-gray-600 leading-[1.7] max-w-lg">
             I write about frontend engineering, design systems, and the intersection
             of technology and creativity on Medium.
           </p>
@@ -102,7 +102,7 @@ export default function BlogPage() {
                   key={post.id}
                   variants={itemVariants}
                   whileHover={{ x: 6 }}
-                  className="group relative block glass-card rounded-xl p-5 cursor-pointer transition-all duration-300 hover:border-[rgba(0,0,0,0.18)]"
+                  className="group relative block glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 hover:border-[rgba(0,0,0,0.18)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
@@ -119,12 +119,12 @@ export default function BlogPage() {
                       </span>
 
                       {/* Title */}
-                      <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-900 tracking-tight mb-2 transition-colors duration-200">
+                      <h3 className="text-base font-semibold text-gray-800 group-hover:text-gray-900 tracking-tight mb-1.5 transition-colors duration-200">
                         {post.title}
                       </h3>
 
                       {/* Excerpt */}
-                      <p className="text-base text-gray-600 leading-relaxed mb-3 line-clamp-2">
+                      <p className="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2">
                         {post.excerpt}
                       </p>
 

@@ -18,7 +18,7 @@ export default function FloatingDock() {
 
   return (
     <motion.div
-      className="fixed bottom-6 left-1/2 z-50"
+      className="fixed bottom-6 left-1/2 z-50 pb-[env(safe-area-inset-bottom)]"
       style={{ x: '-50%' }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}

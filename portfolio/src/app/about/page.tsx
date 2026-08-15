@@ -18,11 +18,11 @@ const techStack = [
 export default function AboutPage() {
   return (
     <PageTransition>
-      <div className="max-w-4xl mx-auto px-6 pt-24 pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-20">
         {/* Header */}
         <div className="mb-20">
-          <h2 className="section-label mb-4">ABOUT</h2>
-          <h1 className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tight mb-10">
+          <h2 className="section-label mb-4 text-sm">ABOUT</h2>
+          <h1 className="font-serif text-4xl md:text-5xl font-black leading-tight tracking-tight mb-8">
             <span className="text-gradient">A bit about</span>
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>me</span>
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
           <TextReveal
             text="I'm a developer who believes that great software is a blend of engineering excellence and thoughtful design. I spend my days writing clean, performant code and my nights exploring new technologies. When I'm not coding, you'll find me reading about design systems, contributing to open source, or experimenting with creative coding."
-            className="text-xl text-[#707070] leading-[1.9] tracking-wide max-w-2xl"
+            className="text-base text-[#707070] leading-[1.7] tracking-normal max-w-2xl"
           />
         </div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
         {/* Tech Stack Marquee */}
         <div className="mb-20">
-          <h2 className="section-label mb-6">TECH STACK</h2>
+          <h2 className="section-label mb-5 text-sm">TOOLS I USE</h2>
           <div className="space-y-4">
             <Marquee items={techStack.slice(0, 8)} speed={35} />
             <Marquee items={techStack.slice(8)} speed={35} reverse />
@@ -62,13 +62,13 @@ export default function AboutPage() {
         </div>
 
         {/* Philosophy */}
-        <div>
-          <h2 className="section-label mb-6">PHILOSOPHY</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mb-20">
+          <h2 className="section-label mb-5 text-sm">VALUES</h2>
+          <div className="grid md:grid-cols-3 gap-5">
             <BentoCard hover delay={0.1}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">⚡</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance First</h3>
+                <h3 className="text-base font-semibold text-gray-900 mb-2">Performance First</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Every millisecond matters. I obsess over Core Web Vitals and user-perceived performance.
                 </p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
             <BentoCard hover delay={0.2}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🎨</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Design Driven</h3>
+                <h3 className="text-base font-semibold text-gray-900 mb-2">Design Driven</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Beautiful interfaces aren&apos;t optional. I believe good design is invisible and intuitive.
                 </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <BentoCard hover delay={0.3}>
               <div className="text-center py-4">
                 <div className="text-2xl mb-3">🧩</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Clean Architecture</h3>
+                <h3 className="text-base font-semibold text-gray-900 mb-2">Clean Architecture</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Maintainable code is a gift to your future self. I write code that reads like prose.
                 </p>

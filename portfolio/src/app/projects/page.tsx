@@ -111,7 +111,7 @@ export default function ProjectsPage() {
 
   return (
     <PageTransition>
-      <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -119,13 +119,13 @@ export default function ProjectsPage() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <h2 className="section-label mb-4">PROJECTS</h2>
-          <h1 className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tight mb-6">
+          <h2 className="section-label mb-4 text-sm">PROJECTS</h2>
+          <h1 className="font-serif text-4xl md:text-5xl font-black leading-tight tracking-tight mb-5">
             <span className="text-gradient">Things I&apos;ve</span>
             <br />
             <span className="text-gradient" style={{ opacity: 0.6 }}>Built</span>
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+          <p className="text-sm text-gray-600 leading-[1.7] max-w-lg">
             A collection of projects that showcase my skills in frontend development,
             full-stack engineering, and open-source contributions.
           </p>
@@ -142,7 +142,7 @@ export default function ProjectsPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`relative px-4 py-2 rounded-full text-base font-medium transition-colors duration-200 ${
+              className={`relative px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
                 activeCategory === cat
                   ? 'text-gray-900'
                   : 'text-gray-600 hover:text-gray-800'
@@ -180,9 +180,9 @@ export default function ProjectsPage() {
                     />
 
                     {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 tracking-tight mb-1">
+                        <h3 className="text-base font-semibold text-gray-900 tracking-tight mb-1">
                           {project.title}
                         </h3>
                         <span
@@ -207,7 +207,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-base text-gray-600 leading-relaxed mb-5">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
                       {project.description}
                     </p>
 
