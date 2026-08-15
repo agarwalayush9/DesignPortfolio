@@ -62,21 +62,21 @@ export default function Hero() {
         </div>
 
         <div>
-          <h1 className="text-2xl font-semibold text-gray-900 tracking-tight mb-1">Ayush Agarwal</h1>
-          <p className="text-[15px] text-gray-500">
+          <h1 className="text-xl font-semibold text-gray-900 tracking-tight mb-0.5">Ayush Agarwal</h1>
+          <p className="text-sm text-gray-500">
             Available for work
           </p>
         </div>
       </motion.div>
 
-      {/* Massive Headline */}
+      {/* Headline */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...transition, delay: 0.2 }}
-        className="mb-10"
+        className="mb-8"
       >
-        <h2 className="font-serif text-[clamp(2.5rem,7vw,5.5rem)] font-black leading-[0.95] tracking-tight">
+        <h2 className="font-serif text-4xl md:text-5xl font-black leading-tight tracking-tight">
           <span className="text-gradient">iOS &</span>
           <br />
           <span className="text-gradient">FULL STACK</span>
@@ -90,9 +90,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...transition, delay: 0.3 }}
-        className="max-w-xl mb-12"
+        className="max-w-xl mb-10"
       >
-        <p className="text-lg text-gray-600 leading-[1.8] tracking-wide">
+        <p className="text-sm text-gray-600 leading-[1.7] tracking-normal">
           I craft beautiful, performant web and iOS experiences.
           Passionate about clean code, intuitive design, and building products that make a difference using{" "}
           <span className="inline-flex align-middle mx-0.5"><TechPill name="Swift" /></span>,{" "}

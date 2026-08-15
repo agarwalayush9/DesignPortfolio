@@ -47,28 +47,28 @@ const itemVariants = {
 export default function Projects() {
   return (
     <section>
-      <h2 className="section-label mb-6">FEATURED PROJECTS</h2>
+      <h2 className="section-label mb-5 text-sm">FEATURED PROJECTS</h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-40px' }}
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-5"
       >
         {projectsData.map((project, index) => (
           <motion.div 
             key={index} 
             variants={itemVariants}
-            className="group relative p-5 rounded-2xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm"
+            className="group relative p-4 rounded-xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm"
           >
-            <div className="flex justify-between items-start mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[rgba(0,0,0,0.12)] to-[rgba(0,0,0,0.03)] border border-[rgba(0,0,0,0.15)] flex items-center justify-center text-gray-900 shadow-inner">
-                  <AppWindow size={18} />
+            <div className="flex justify-between items-start mb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[rgba(0,0,0,0.12)] to-[rgba(0,0,0,0.03)] border border-[rgba(0,0,0,0.15)] flex items-center justify-center text-gray-900 shadow-inner">
+                  <AppWindow size={16} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 tracking-tight group-hover:text-gray-900 transition-colors">{project.title}</h3>
-                  <div className="text-[13px] text-gradient-accent mt-0.5">{project.status}</div>
+                  <h3 className="text-base font-semibold text-gray-900 tracking-tight group-hover:text-gray-900 transition-colors">{project.title}</h3>
+                  <div className="text-[12px] text-gradient-accent mt-0.5">{project.status}</div>
                 </div>
               </div>
               <div className="flex gap-2">
@@ -95,7 +95,7 @@ export default function Projects() {
               </div>
             </div>
             
-            <p className="text-base text-gray-600 mb-5 leading-relaxed">
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               {project.description}
             </p>
             

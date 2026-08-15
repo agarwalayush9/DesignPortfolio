@@ -46,7 +46,7 @@ const itemVariants = {
 export default function ExperienceTimeline() {
   return (
     <section>
-      <h2 className="section-label mb-6">EXPERIENCE</h2>
+      <h2 className="section-label mb-5 text-sm">EXPERIENCE</h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -58,8 +58,8 @@ export default function ExperienceTimeline() {
           <motion.div key={index} variants={itemVariants}>
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1 md:gap-4 mb-2">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 tracking-tight">{exp.role}</h3>
-                <div className="text-[15px] mt-0.5">
+                <h3 className="text-base font-semibold text-gray-900 tracking-tight">{exp.role}</h3>
+                <div className="text-[14px] mt-0.5">
                   <span className="text-gradient-accent">{exp.company}</span>
                   {exp.remote && (
                     <span className="text-gray-600 ml-1.5"> · Remote</span>
@@ -70,7 +70,7 @@ export default function ExperienceTimeline() {
                 {exp.date}
               </div>
             </div>
-            <p className="text-base text-gray-600 mt-2 mb-4 leading-relaxed">
+            <p className="text-sm text-gray-600 mt-2 mb-3 leading-relaxed">
               {exp.description}
             </p>
             <div className="flex flex-wrap gap-1.5">
