@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Calendar, Mail, Copy, Check, MapPin, Clock } from "lucide-react";
 import { TechPill } from "./TechPills";
+import PageViewCounter from "./PageViewCounter";
+import Socials from "./Socials";
 
 const transition = { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const };
 
@@ -38,6 +40,7 @@ export default function Hero() {
             <span>{new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false })}</span>
           </div>
         </div>
+        <PageViewCounter />
       </motion.div>
 
       {/* Avatar + Identity Row */}
@@ -109,11 +112,11 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...transition, delay: 0.4 }}
       >
-        <button className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-3 text-sm">
-          <Calendar className="w-[15px] h-[15px]" />
-          Book a Call
-        </button>
+
         <div className="flex items-center gap-2 w-full sm:w-auto">
+          {/* Social Links */}
+          <Socials />
+
           <a 
             href={`mailto:${email}`}
             className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2.5 px-7 py-3 text-sm"

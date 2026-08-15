@@ -47,34 +47,23 @@ const itemVariants = {
 
 export default function Socials() {
   return (
-    <section>
-      <h2 className="section-label mb-5">CONNECT</h2>
-      <motion.div
-        className="flex flex-wrap gap-3"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        {socials.map((social) => {
-          const Icon = social.icon;
-          return (
-            <motion.a
-              key={social.name}
-              href={social.href}
-              target={social.href.startsWith('mailto') ? undefined : '_blank'}
-              rel="noopener noreferrer"
-              variants={itemVariants}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-gray-200 text-[13px] text-slate-600 hover:text-slate-900 hover:border-gray-300 transition-all duration-300 hover:shadow-sm"
-            >
-              <Icon size={15} />
-              <span className="tracking-wide">{social.name}</span>
-            </motion.a>
-          );
-        })}
-      </motion.div>
-    </section>
+    <div className="flex flex-wrap gap-2">
+      {socials.map((social) => {
+        if (social.name === 'Email') return null;
+        const Icon = social.icon;
+        return (
+          <a
+            key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow group"
+            aria-label={social.name}
+          >
+            <Icon size={16} className="group-hover:scale-110 transition-transform duration-300" />
+          </a>
+        );
+      })}
+    </div>
   );
 }

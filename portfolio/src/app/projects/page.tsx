@@ -30,7 +30,7 @@ function ForkIcon({ size = 12 }: { size?: number }) {
   );
 }
 
-const categories = ['All', 'Frontend', 'Full Stack', 'Open Source', 'UI Mockups'];
+const categories = ['All', 'Frontend', 'Full Stack', 'UI Mockups'];
 
 const projects = [
   {
@@ -160,16 +160,10 @@ export default function ProjectsPage() {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <AnimatePresence mode="popLayout">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filtered.map((project) => (
-              <motion.div
+              <div
                 key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
                 <TiltCard>
                   <div className="p-6">
@@ -184,14 +178,7 @@ export default function ProjectsPage() {
                         <h3 className="text-base font-semibold text-gray-900 tracking-tight mb-1">
                           {project.title}
                         </h3>
-                        <span
-                          className="text-xs font-mono tracking-wider px-2 py-0.5 rounded-full border"
-                          style={{
-                            color: project.accentColor,
-                            borderColor: project.accentColor + '30',
-                            backgroundColor: project.accentColor + '10',
-                          }}
-                        >
+                        <span className="text-xs tracking-wider text-gradient-accent uppercase font-semibold">
                           {project.category.toUpperCase()}
                         </span>
                       </div>
@@ -224,10 +211,9 @@ export default function ProjectsPage() {
 
                   </div>
                 </TiltCard>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
     </PageTransition>
   );

@@ -86,35 +86,21 @@ export default function BlogPage() {
 
         {/* Blog Posts List */}
         {!isLoading && (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
-            className="space-y-2"
-          >
+          <div className="space-y-2">
             {posts.map((post) => {
               const tagColor = getTagColor(post.category);
               return (
-                <motion.a
+                <a
                   href={post.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   key={post.id}
-                  variants={itemVariants}
-                  whileHover={{ x: 6 }}
-                  className="group relative block glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 hover:border-[rgba(0,0,0,0.18)]"
+                  className="group relative block glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 shimmer-border"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
                       {/* Tag */}
-                      <span
-                        className="inline-block text-xs font-mono tracking-wider px-2 py-0.5 rounded-full border mb-3"
-                        style={{
-                          color: tagColor,
-                          borderColor: tagColor + '30',
-                          backgroundColor: tagColor + '08',
-                        }}
-                      >
+                      <span className="inline-block text-xs tracking-wider text-gradient-accent uppercase font-semibold mb-3">
                         {post.category.toUpperCase()}
                       </span>
 
@@ -159,10 +145,10 @@ export default function BlogPage() {
                     whileHover={{ scaleY: 1 }}
                     transition={{ duration: 0.3 }}
                   />
-                </motion.a>
+                </a>
               );
             })}
-          </motion.div>
+          </div>
         )}
       </div>
     </PageTransition>

@@ -27,9 +27,8 @@ export default function Marquee({ items, speed = 30, reverse = false }: MarqueeP
         {content.map((item, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-[13px] text-slate-600 font-medium whitespace-nowrap shadow-sm"
+            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[13px] font-mono text-slate-700 bg-slate-50 border border-slate-200 whitespace-nowrap cursor-default"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#333]" />
             {item}
           </span>
         ))}

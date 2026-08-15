@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Home, User, FolderKanban, Newspaper, Mail } from 'lucide-react';
+import { Home, User, FolderKanban, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -10,7 +10,6 @@ const navItems = [
   { icon: FolderKanban, href: '/projects', label: 'Projects' },
   { icon: User, href: '/about', label: 'About' },
   { icon: Newspaper, href: '/blog', label: 'Blog' },
-  { icon: Mail, href: '/contact', label: 'Contact' },
 ];
 
 export default function FloatingDock() {
@@ -46,8 +45,6 @@ export default function FloatingDock() {
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
-                {/* Hover background glow */}
-                <div className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.09)] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 <Icon size={18} className="relative z-10" />
               </motion.div>
             </Link>

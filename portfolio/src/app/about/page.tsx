@@ -3,6 +3,7 @@ import TextReveal from '@/components/TextReveal';
 import Marquee from '@/components/Marquee';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import BentoCard from '@/components/BentoCard';
+import { Zap, Palette, Puzzle } from 'lucide-react';
 
 const tools = [
   'VS Code', 'Figma', 'GitHub', 'Vercel', 'Docker', 'Postman',
@@ -48,7 +49,7 @@ export default function AboutPage() {
 
         {/* Tech Stack Marquee */}
         <div className="mb-20">
-          <h2 className="section-label mb-5 text-sm">TOOLS I USE</h2>
+          <h2 className="section-label mb-5 text-sm">TECH STACK</h2>
           <div className="space-y-4">
             <Marquee items={techStack.slice(0, 8)} speed={35} />
             <Marquee items={techStack.slice(8)} speed={35} reverse />
@@ -57,7 +58,7 @@ export default function AboutPage() {
 
         {/* Tools Marquee */}
         <div className="mb-20">
-          <h2 className="section-label mb-6">TOOLS I USE</h2>
+          <h2 className="section-label mb-5 text-sm">TOOLS I USE</h2>
           <Marquee items={tools} speed={40} />
         </div>
 
@@ -67,7 +68,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-5">
             <BentoCard hover delay={0.1}>
               <div className="text-center py-4">
-                <div className="text-2xl mb-3">⚡</div>
+                <Zap size={26} strokeWidth={1.5} className="mx-auto mb-3 text-amber-500" />
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Performance First</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Every millisecond matters. I obsess over Core Web Vitals and user-perceived performance.
@@ -76,7 +77,7 @@ export default function AboutPage() {
             </BentoCard>
             <BentoCard hover delay={0.2}>
               <div className="text-center py-4">
-                <div className="text-2xl mb-3">🎨</div>
+                <Palette size={26} strokeWidth={1.5} className="mx-auto mb-3 text-indigo-500" />
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Design Driven</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Beautiful interfaces aren&apos;t optional. I believe good design is invisible and intuitive.
@@ -85,7 +86,7 @@ export default function AboutPage() {
             </BentoCard>
             <BentoCard hover delay={0.3}>
               <div className="text-center py-4">
-                <div className="text-2xl mb-3">🧩</div>
+                <Puzzle size={26} strokeWidth={1.5} className="mx-auto mb-3 text-emerald-500" />
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Clean Architecture</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Maintainable code is a gift to your future self. I write code that reads like prose.

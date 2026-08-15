@@ -48,17 +48,10 @@ export default function Projects() {
   return (
     <section>
       <h2 className="section-label mb-5 text-sm">FEATURED PROJECTS</h2>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: '-40px' }}
-        className="flex flex-col gap-5"
-      >
+      <div className="flex flex-col gap-5">
         {projectsData.map((project, index) => (
-          <motion.div 
+          <div 
             key={index} 
-            variants={itemVariants}
             className="group relative p-4 rounded-xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm"
           >
             <div className="flex justify-between items-start mb-3">
@@ -104,9 +97,9 @@ export default function Projects() {
                 <TechPill key={tech} name={tech} />
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

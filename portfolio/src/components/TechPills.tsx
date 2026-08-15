@@ -24,26 +24,8 @@ interface TechPillProps {
 }
 
 export function TechPill({ name }: TechPillProps) {
-  let color = techColors[name] || '#64748b';
-
-  // In light mode, white logos like Next.js should be black
-  if (color === '#ffffff' || color === '#e5e5e5') {
-    color = '#000000';
-  }
-
   return (
-    <span 
-      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[13px] font-medium transition-all duration-300 cursor-default"
-      style={{ 
-        backgroundColor: color + '10', // 10% opacity for subtle tint
-        border: `1px solid ${color}25`,
-        color: '#334155', // slate-700 for readable text
-      }}
-    >
-      <span
-        className="w-1.5 h-1.5 rounded-full"
-        style={{ backgroundColor: color }}
-      />
+    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[13px] font-mono text-slate-700 bg-slate-50 border border-slate-200 cursor-default">
       {name}
     </span>
   );

@@ -47,15 +47,9 @@ export default function ExperienceTimeline() {
   return (
     <section>
       <h2 className="section-label mb-5 text-sm">EXPERIENCE</h2>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: '-40px' }}
-        className="flex flex-col"
-      >
+      <div className="flex flex-col">
         {experienceData.map((exp, index) => (
-          <motion.div key={index} variants={itemVariants}>
+          <div key={index}>
             <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1 md:gap-4 mb-2">
               <div>
                 <h3 className="text-base font-semibold text-gray-900 tracking-tight">{exp.role}</h3>
@@ -82,9 +76,9 @@ export default function ExperienceTimeline() {
             {index < experienceData.length - 1 && (
               <div className="border-t border-[rgba(0,0,0,0.06)] my-6" />
             )}
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
