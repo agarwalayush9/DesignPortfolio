@@ -208,7 +208,7 @@ export default function ProjectsPage() {
                       {project.techs.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-mono tracking-wide px-2 py-0.5 rounded-full bg-[rgba(0,0,0,0.045)] border border-[rgba(0,0,0,0.09)] text-gray-600"
+                          className="text-xs font-mono tracking-wide px-2 py-0.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700"
                         >
                           {tech}
                         </span>
