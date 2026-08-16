@@ -153,7 +153,7 @@ export default function ProjectsPage() {
               {activeCategory === cat && (
                 <motion.div
                   layoutId="category-pill"
-                  className="absolute inset-0 rounded-full bg-[rgba(0,0,0,0.12)] border border-[rgba(0,0,0,0.15)]"
+                  className="absolute inset-0 rounded-full bg-[var(--pill-active-bg)] border border-[var(--pill-active-border)]"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               )}
@@ -170,11 +170,6 @@ export default function ProjectsPage() {
               >
                 <TiltCard>
                   <div className="p-6">
-                    {/* Gradient accent bar */}
-                    <div
-                      className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r ${project.gradient}`}
-                    />
-
                     {/* Header */}
                     <div className="flex items-start justify-between mb-3">
                       <div>

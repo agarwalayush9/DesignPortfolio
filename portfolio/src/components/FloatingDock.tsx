@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Home, User, FolderKanban, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from './ThemeToggle';
 
 const navItems = [
   { icon: Home, href: '/', label: 'Home' },
@@ -31,7 +32,7 @@ export default function FloatingDock() {
             <Link key={item.href} href={item.href}>
               <motion.div
                 className={`relative p-2.5 rounded-xl transition-colors duration-200 focus:outline-none group ${
-                  isActive ? 'text-gray-900' : 'text-[#525252] hover:text-gray-900'
+                  isActive ? 'text-[var(--dock-text-hover)]' : 'text-[var(--dock-text)] hover:text-[var(--dock-text-hover)]'
                 }`}
                 whileHover={{ scale: 1.15, y: -3 }}
                 whileTap={{ scale: 0.95 }}
@@ -41,7 +42,7 @@ export default function FloatingDock() {
                 {isActive && (
                   <motion.div
                     layoutId="dock-active"
-                    className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.12)]"
+                    className="absolute inset-0 rounded-xl bg-[var(--dock-active-bg)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -50,6 +51,7 @@ export default function FloatingDock() {
             </Link>
           );
         })}
+        <ThemeToggle />
       </div>
     </motion.div>
   );

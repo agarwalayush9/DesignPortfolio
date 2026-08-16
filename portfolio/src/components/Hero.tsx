@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[#22c55e]/20 via-transparent to-[#6366f1]/20 blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative w-[72px] h-[72px] rounded-full border border-[rgba(0,0,0,0.12)] p-[3px]">
             <div className="relative w-full h-full rounded-full flex items-center justify-center overflow-hidden bg-gray-50">
-              <Image src="/profile.png" alt="Ayush Agarwal" fill className="object-cover" />
+              <Image src="/profile.png" alt="Ayush Agarwal" fill sizes="(max-width: 768px) 80px, 96px" priority className="object-cover" />
             </div>
           </div>
           {/* Status dot */}

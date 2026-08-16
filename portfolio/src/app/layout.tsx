@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import BackgroundLayers from "@/components/BackgroundLayers";
 import FloatingDock from "@/components/FloatingDock";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,13 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-white text-foreground font-sans antialiased">
-        <BackgroundLayers />
-        <div className="relative z-10 min-h-screen pb-32">
-          {children}
-        </div>
-        <FloatingDock />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <BackgroundLayers />
+          <div className="relative z-10 min-h-screen pb-32">
+            {children}
+          </div>
+          <FloatingDock />
+        </ThemeProvider>
       </body>
     </html>
   );
