@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
@@ -15,9 +15,17 @@ export default function TiltCard({ children, className = '' }: TiltCardProps) {
   const [rotateY, setRotateY] = useState(0);
   const [glareX, setGlareX] = useState(50);
   const [glareY, setGlareY] = useState(50);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect touch devices to disable heavy 3D math and prevent overlap bugs
+  import_react: useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(!window.matchMedia('(hover: hover)').matches);
+    }
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
+    if (!ref.current || isMobile) return;
     const rect = ref.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
@@ -40,13 +48,13 @@ export default function TiltCard({ children, className = '' }: TiltCardProps) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
-        rotateX,
-        rotateY,
-        transformStyle: 'preserve-3d',
-        perspective: 1000,
+        rotateX: isMobile ? 0 : rotateX,
+        rotateY: isMobile ? 0 : rotateY,
+        transformStyle: isMobile ? 'flat' : 'preserve-3d',
+        perspective: isMobile ? 'none' : 1000,
       }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className={`relative glass-card shimmer-border rounded-2xl group cursor-pointer ${className}`}
+      className={`relative glass-card shimmer-border rounded-2xl group cursor-pointer h-full flex flex-col ${className}`}
     >
       {/* Glare effect */}
       <div
@@ -55,7 +63,7 @@ export default function TiltCard({ children, className = '' }: TiltCardProps) {
           background: `radial-gradient(circle at ${glareX}% ${glareY}%, var(--glare-color) 0%, transparent 60%)`,
         }}
       />
-      <div style={{ transform: 'translateZ(20px)' }}>
+      <div className="flex flex-col flex-1 h-full" style={{ transform: isMobile ? 'none' : 'translateZ(20px)' }}>
         {children}
       </div>
     </motion.div>

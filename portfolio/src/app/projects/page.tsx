@@ -167,6 +167,7 @@ export default function ProjectsPage() {
             {filtered.map((project) => (
               <div
                 key={project.title}
+                className="h-full"
               >
                 <TiltCard>
                   <div className="p-6">

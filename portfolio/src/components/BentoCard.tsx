@@ -13,7 +13,7 @@ interface BentoCardProps {
 export default function BentoCard({ children, className = '', hover = false, delay = 0 }: BentoCardProps) {
   return (
     <div
-      className={`glass-card ${hover ? 'shimmer-border' : ''} rounded-2xl p-6 transition duration-500 ${className}`}
+      className={`glass-card ${hover ? 'shimmer-border' : ''} rounded-2xl p-6 transition duration-500 h-full flex flex-col ${className}`}
     >
       {children}
     </div>

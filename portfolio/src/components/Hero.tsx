@@ -99,9 +99,8 @@ export default function Hero() {
           I craft beautiful, performant web and iOS experiences.
           Passionate about clean code, intuitive design, and building products that make a difference using{" "}
           <span className="inline-flex align-middle mx-0.5"><TechPill name="Swift" /></span>,{" "}
-          <span className="inline-flex align-middle mx-0.5"><TechPill name="React" /></span>,{" "}
-          <span className="inline-flex align-middle mx-0.5"><TechPill name="Next.js" /></span>{" "}
-          and <span className="inline-flex align-middle mx-0.5"><TechPill name="Node.js" /></span>.
+          <span className="inline-flex align-middle mx-0.5"><TechPill name="React" /></span> and{" "}
+          <span className="inline-flex align-middle mx-0.5"><TechPill name="Next.js" /></span>.
         </p>
       </motion.div>
 
