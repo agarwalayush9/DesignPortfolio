@@ -92,7 +92,7 @@ export default function ContributionGraph() {
                   {col.map((cell, rIdx) => (
                     <div
                       key={rIdx}
-                      className={`w-[10px] h-[10px] rounded-[2px] transition-all duration-300 ${levelColors[cell.level]} ${levelGlow[cell.level]}`}
+                      className={`w-[10px] h-[10px] rounded-[2px] transition duration-300 ${levelColors[cell.level]} ${levelGlow[cell.level]}`}
                       title={cell.count > 0 ? `${cell.count} contributions` : 'No contributions'}
                     />
                   ))}

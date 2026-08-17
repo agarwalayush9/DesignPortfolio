@@ -52,7 +52,7 @@ export default function Projects() {
         {projectsData.map((project, index) => (
           <div 
             key={index} 
-            className="group relative p-4 rounded-xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm"
+            className="group relative p-4 rounded-xl bg-white border border-gray-100 hover:border-gray-300 hover:shadow-md transition duration-300 shadow-sm"
           >
             <div className="flex justify-between items-start mb-3">
               <div className="flex items-center gap-2.5">
@@ -70,7 +70,7 @@ export default function Projects() {
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition-all"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition"
                   >
                     <Code2 size={14} />
                   </a>
@@ -80,7 +80,7 @@ export default function Projects() {
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition-all"
+                    className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-gray-100 hover:text-slate-900 transition"
                   >
                     <ExternalLink size={14} />
                   </a>

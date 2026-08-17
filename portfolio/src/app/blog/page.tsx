@@ -96,7 +96,7 @@ export default function BlogPage() {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                  className="group relative block glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 shimmer-border"
+                  className="group relative block glass-card rounded-xl p-4 cursor-pointer transition duration-300 shimmer-border"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
