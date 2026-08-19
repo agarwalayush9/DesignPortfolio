@@ -4,6 +4,7 @@ import "./globals.css";
 import BackgroundLayers from "@/components/BackgroundLayers";
 import FloatingDock from "@/components/FloatingDock";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           </div>
           <FloatingDock />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
