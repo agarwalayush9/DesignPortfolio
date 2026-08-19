@@ -81,7 +81,7 @@ function getPostCategory(title: string, categories: string[]) {
 function extractItems(xml: string): BlogPost[] {
   const itemMatches = Array.from(xml.matchAll(/<item>([\s\S]*?)<\/item>/gi));
 
-  return itemMatches.slice(0, 3).map((match) => {
+  return itemMatches.map((match) => {
     const item = match[1];
     const title = cleanXmlText(extractTag(item, "title"));
     const link = cleanXmlText(extractTag(item, "link"));
